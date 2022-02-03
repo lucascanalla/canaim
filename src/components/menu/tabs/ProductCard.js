@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useMemo } from 'react'
 import { UncontrolledTooltip } from 'reactstrap';
 import { getProductsBySubCategory } from '../../../selectors/getProductsBySubCategory'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,11 +9,14 @@ import { faBullhorn } from '@fortawesome/free-solid-svg-icons'
 const ProductCard = ({subcategory}) => {
 
 	const [productsArray, setProductsArray] = useState(null)
+	const products = useMemo( 
+			() => getProductsBySubCategory (subcategory).then(res=> setProductsArray(res.products)) );
 
-	useEffect(() => {
-		const products = getProductsBySubCategory (subcategory).then(res=> setProductsArray(res.products))
-	}, [])
-
+	/*useEffect(() => {
+		console.log('asd');
+		//const products = getProductsBySubCategory (subcategory).then(res=> setProductsArray(res.products));
+	}, [setProductsArray])
+	*/
 	return (
 		<>
 		{	productsArray != null
@@ -52,7 +55,7 @@ const ProductCard = ({subcategory}) => {
 					)
 				)
 			:
-			<h1>Cargando...</h1>
+			<h5>Cargando...</h5>
 		}
 		</>
 	)

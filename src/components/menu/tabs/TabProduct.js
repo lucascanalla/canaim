@@ -34,7 +34,7 @@ const TabProduct = ({ category }) => {
 	            	);
 	            })
 	            :
-	          	<h1>Undefined capo</h1>
+	          	<h3>Espere..</h3>
 			}
         </div>
 	)

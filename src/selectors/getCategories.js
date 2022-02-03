@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export const getCategories = async () => {
-	
-	const apiUrl = process.env.REACT_APP_API_URL;
+    	
+    const apiUrl = process.env.REACT_APP_API_URL;
 
     try {
         const { data } = await axios.get(`${apiUrl}/categorys/`);
@@ -14,4 +14,5 @@ export const getCategories = async () => {
         return err;
     }
 }
+
 

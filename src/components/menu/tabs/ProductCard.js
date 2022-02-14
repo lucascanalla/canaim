@@ -16,7 +16,7 @@ const ProductCard = ({subcategory}) => {
 	useEffect(() => {
 		//console.log('asd');
 		const products = getProductsBySubCategory (subcategory).then(res=> setProductsArray(res.products));
-	}, [productsArray])
+	}, [])
 	
 	return (
 		<>

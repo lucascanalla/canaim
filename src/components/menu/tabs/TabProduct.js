@@ -24,7 +24,6 @@ const TabProduct = ({ category }) => {
 		            		<SubcategoryName
 		            			subcategoryName = {subcategory.name}
 		                    	key = { subcategory._id }
-		            			
 		            		/>
 		                    <ProductCard 
 		               			subcategory = {subcategory._id}
@@ -34,7 +33,7 @@ const TabProduct = ({ category }) => {
 	            	);
 	            })
 	            :
-	          	<h3>Espere..</h3>
+	          	<h3 className="h5-custom">Espere..</h3>
 			}
         </div>
 	)

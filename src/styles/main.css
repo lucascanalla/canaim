@@ -8,7 +8,7 @@ body{
     color: #380006; /*secundary color bordo*/ 
 
 }
-h1{
+h1, h2, h3, h4, h5{
     font-family: 'Averia Serif Libre';font-size: 22px;
 }
 img{
@@ -305,4 +305,8 @@ hr.small-solid {
     width: 100%;
     text-align: left;
   }
+}
+
+.h5-custom {
+  padding-left: 2rem;
 }

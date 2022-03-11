@@ -20,7 +20,7 @@ const TabProduct = ({ category }) => {
 				subcatArray.map(function(subcategory){ 
 	            	return(
 	            	<div className="tab-row-set">
-		            	<div className="card mt-3">
+		            	<div className="card mt-3 card-div">
 		            		<SubcategoryName
 		            			subcategoryName = {subcategory.name}
 		                    	key = { subcategory._id }

@@ -77,7 +77,6 @@ const SubcategoryName = ({subcategoryName}) => {
 			<div className="tab-div-set d-flex card-title">
     			<i className="fa-set"><FontAwesomeIcon icon={iconFa} /> </i>
     			<h3 className="tab-h3-set ml-3">{subcategoryName}</h3>
-    			
     		</div>
     		<hr className="solid"></hr>
 		</>

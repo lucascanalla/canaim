@@ -1,9 +1,12 @@
 :root{
    --headingFont:'Raleway', sans-serif;
-}
+   --principalColor: #380006;
+   --secundaryColor: #cba281;
+   --alternativeColor: #e5d1c1;
+};
+
 body{
     background-color: rgb(229 209 193 / 27%) !important; /*background color cremita*/
-
     /*intermediate-color: #cba281*/
     color: #380006; /*secundary color bordo*/ 
 
@@ -11,24 +14,44 @@ body{
 h1, h2, h3, h4, h5{
     font-family: 'Averia Serif Libre';font-size: 22px;
 }
+
 img{
     border-radius: 50%;
-    box-shadow: 0 4px 8px 0 #3800068c, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 13px 0 #cba281, 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
 
+.img-alt{
+    border-radius: 50%;
+    /*box-shadow: 0 4px 8px 0 #3800068c, 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    box-shadow: 0px 0px 13px 0 #3800068c, 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
 .menu-header-set{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     align-items: center;
 }
 
 .a-insta-set{
-    color: #380006;
+    color: var(--principalColor);
     padding-left: 10px;
 }
+
+.a-insta-set-alt{
+    color: var(--alternativeColor);
+    padding-left: 10px;
+}
+
 .card{
     border: 1px solid #38000638 !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 20px 5px #e4d0c0, inset -1px -2px 2px 0px rgb(0 0 0 / 19%);
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+.card-alt{
+    border: 1px solid #38000638 !important;
+    background-color: var(--principalColor) !important; 
+    box-shadow: 0px 0px 20px 5px #e4d0c0, inset -1px -2px 2px 0px rgb(0 0 0 / 19%);
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 .card-columns{
@@ -50,10 +73,13 @@ img{
     border-color: #380006 !important;
     font-weight: 600;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top-width: 2px !important; 
+    border-left-width: 2px !important;
+    border-right-width: 2px !important;
 }
 
 .nav-tabs{
-    border-bottom-width: 1px !important ;
+    border-bottom-width: 3px !important ;
     border-bottom-color: #380006 !important;
     /*border: 1px solid #380006 !important;*/
 }
@@ -70,16 +96,30 @@ img{
 
 .menu-h1-set{
     font-size: xxx-large !important;
-    color: #380006 !important;
+    color: var(--principalColor) !important;
 }
+
+.menu-h1-set-alt{
+    font-size: xxx-large !important;
+    color: var(--secundaryColor) !important;
+}
+
 .span-recom-set{
     padding-left: 15px;
 }
+
 .fa-set {
     padding-top: 5px;
     padding-right: 10px;
-    color: #cba281 !important;
+    color: var(--secundaryColor) !important;
 }
+
+.fa-set-alt {
+    padding-top: 5px;
+    padding-right: 10px;
+    color: var(--alternativeColor) !important;
+}
+
 .prod-ul-set {
     margin-bottom: 2px !important;
     padding-right: 2rem;  
@@ -87,7 +127,9 @@ img{
 
 .tab-div-set {
     padding-left: 1rem;
-    margin-top: 10px !important;   
+    margin-top: 10px !important;
+    justify-content: center;
+    align-items: baseline;
 }
 
 .tab-row-set{
@@ -95,6 +137,12 @@ img{
 }
 
 .tab-h3-set{
+    color: #212529;
+    font-weight: bold;
+}
+
+.tab-h3-set-alt{
+    color: var(--alternativeColor);
     font-weight: bold;
 }
 
@@ -109,14 +157,21 @@ img{
 
 /* Solid border */
 hr.solid {
-  border-top: 2px solid #380006;
+  border-top: 2px solid var(--principalColor);
+  margin-top: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+hr.solid-alt {
+  border-top: 2px solid var(--alternativeColor);
   margin-top: auto;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 hr.small-solid {
-  border-top: 1px solid #380006;
+  border-top: 1px solid var(--principalColor);
   margin-top: auto;
 }
 
@@ -148,6 +203,7 @@ hr.small-solid {
     margin-bottom: 2rem;
     align-items: center;
 }
+
 .campo-form:last-of-type {
   margin: 0;
 }
@@ -309,4 +365,22 @@ hr.small-solid {
 
 .h5-custom {
   padding-left: 2rem;
+}
+
+.p-div{
+    margin-bottom: 0px;
+    margin-left: 25px;
+    font-size: small;
+    font-style: italic;
+    color: var(--principalColor);
+}
+
+.div-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-div{
+    padding-bottom: 10px;
 }

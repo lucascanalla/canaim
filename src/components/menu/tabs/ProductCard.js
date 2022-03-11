@@ -25,34 +25,45 @@ const ProductCard = ({subcategory}) => {
 					?
 						productsArray.map( product => (
 							<ul className="prod-ul-set" key={product._id} >
-								<div className="d-flex justify-content-between">
-									<div className="prod-div-set p-2">
-										{product.name}
-										{
-										product.recommended && product._id != null
-										?
-										(<span id="spanRecommendedId" className="span-recom-set">
-			                            	<FontAwesomeIcon icon={faStar} />
-			                            	<UncontrolledTooltip placement="right"  target="spanRecommendedId">
-									    		Recomendado!
-									    	</UncontrolledTooltip>
-			                            </span>)
-			                            : <></>
-										}
+								<div className="row">
+									<div className="col-9">
+										<div className="prod-div-set">
+											{product.name}
+											{
+											product.recommended && product._id != null
+											?
+											(<span id="spanRecommendedId" className="span-recom-set">
+				                            	<FontAwesomeIcon icon={faStar} />
+				                            	<UncontrolledTooltip placement="right"  target="spanRecommendedId">
+										    		Recomendado!
+										    	</UncontrolledTooltip>
+				                            </span>)
+				                            : <></>
+											}
 
-										{
-										product.new && product._id != null
-										?
-										(<span id="spanNewId" className="span-recom-set">
-			                            	<FontAwesomeIcon icon={faBullhorn} />
-			                            	<UncontrolledTooltip placement="right"  target="spanNewId">
-									    		Nuevo!
-									    	</UncontrolledTooltip>
-			                            </span>)
-			                            : <></>
-										}
+											{
+											product.new && product._id != null
+											?
+											(<span id="spanNewId" className="span-recom-set">
+				                            	<FontAwesomeIcon icon={faBullhorn} />
+				                            	<UncontrolledTooltip placement="right"  target="spanNewId">
+										    		Nuevo!
+										    	</UncontrolledTooltip>
+				                            </span>)
+				                            : <></>
+											}
+										</div>
+										<p className="p-div">
+											{product.preferences_merc}
+											{/*{ product.comment != null ?
+												product.comment 
+												:
+												product.comment
+											}*/}
+											
+										</p>
 									</div>
-									<div className="p-2">
+									<div className="col-3 div-price">
 										${product.price}
 									</div>
 								</div>
